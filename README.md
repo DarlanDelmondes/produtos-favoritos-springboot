@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# Lista de Produtos SpringFavs
 
 Olá, seja bem vindo(a).
 Esta aplicação está escrita em Java usando o framework Spring Boot e integração com o MySQL (Hibernate).
