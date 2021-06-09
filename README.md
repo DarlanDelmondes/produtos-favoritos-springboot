@@ -39,7 +39,7 @@ Excluindo um cliente:
 Atualizando um cliente:
 
     PUT http://<endpoint_da_aplicacao>/api/clientes
-    {"email": "aaa3", "nome": "aaa3"}
+    {"endereco": "nome@conta.com", "nome": "Usuario"}
 
 ## Cadastrando um Produto
 
