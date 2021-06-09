@@ -26,14 +26,7 @@ Listando os clientes cadastrados:
 Adicionando um cliente:
 
     POST http://<endpoint_da_aplicacao>/api/clientes
-    {
-      "id" : 1,
-      "title" : "G6 Moto",
-      "price" : 1300.0,
-      "image" : "https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
-      "brand" : "Motorola",
-      "reviewScore" : 1.0
-      }
+    {"endereco": "nome@conta.com", "nome": "Usuario"}
 
 Consultando um cliente:
 
@@ -55,7 +48,14 @@ Listando os produtos disponíveis:
 Adicionando um produto na prateleira:
 
     POST http://<endpoint_da_aplicacao>/api/itens
-    {"nome": "Mortandela", "preco": 112.12}
+    {
+      "id" : 1,
+      "title" : "G6 Moto",
+      "price" : 1300.0,
+      "image" : "https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
+      "brand" : "Motorola",
+      "reviewScore" : 1.0
+      }
 
 Consultado um produto na prateleira:
 
@@ -68,7 +68,14 @@ Excluindo um produto da prateleira:
 Atualizando um produto na prateleira:
 
     PUT http://<endpoint_da_aplicacao>/api/itens
-    {"nome": "Mortandela", "preco": 112.13}
+    {
+      "id" : 1,
+      "title" : "G6 Moto",
+      "price" : 1300.0,
+      "image" : "https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
+      "brand" : "Motorola",
+      "reviewScore" : 1.0
+      }
 
 ## Adicionando uma lista de  favoritos para um Cliente
 
