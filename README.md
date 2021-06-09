@@ -26,7 +26,14 @@ Listando os clientes cadastrados:
 Adicionando um cliente:
 
     POST http://<endpoint_da_aplicacao>/api/clientes
-    {"email": "a@a.com", "nome": "aaa3"}
+    {
+      "id" : 1,
+      "title" : "G6 Moto",
+      "price" : 1300.0,
+      "image" : "https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
+      "brand" : "Motorola",
+      "reviewScore" : 1.0
+      }
 
 Consultando um cliente:
 
