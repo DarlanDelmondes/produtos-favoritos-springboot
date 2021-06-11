@@ -33,6 +33,9 @@ Acesse a raiz da pasta do projeto e execute a aplicação com o comando a seguir
 
 > É normal este passo levar alguns minutos
 
+> **Note:** A aplicação irá subir na porta 8080 
+
+
 ### Autentique-se:
 Para consumir qualquer recurso da API é necessária uma autenticação prévia via Basic Auth usando o método GET:
 
@@ -72,7 +75,7 @@ Listando os produtos disponíveis:
 
 Adicionando um produto na prateleira:
 
-    POST http://<endpoint_da_aplicacao>/api/itens
+    POST http://<endpoint_da_aplicacao>/api/products
     {
       "id" : 1,
       "title" : "G6 Moto",
@@ -84,15 +87,15 @@ Adicionando um produto na prateleira:
 
 Consultado um produto na prateleira:
 
-    GET http://<endpoint_da_aplicacao>/api/itens/5
+    GET http://<endpoint_da_aplicacao>/api/products/5
 
 Excluindo um produto da prateleira:
 
-    DELETE http://<endpoint_da_aplicacao>/api/itens/5
+    DELETE http://<endpoint_da_aplicacao>/api/products/5
 
 Atualizando um produto na prateleira:
 
-    PUT http://<endpoint_da_aplicacao>/api/itens
+    PUT http://<endpoint_da_aplicacao>/api/products
     {
       "id" : 1,
       "title" : "G6 Moto",
@@ -126,7 +129,7 @@ Onde:
 
 Consulta as listas do cliente:
 
-    http://localhost:8080/api/clientes/{clienteId}/pedidos
+    http://localhost:8080/api/clientes/{clienteId}/favoritos
 
 Consulta os produtos da lista:
 
