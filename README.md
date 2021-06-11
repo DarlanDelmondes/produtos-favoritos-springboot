@@ -8,7 +8,7 @@ Trata-se de uma aplicação destinada a cadastrar uma coleção de produtos favo
 # Instalação
 
 
-> **Note:** Certifique-se de que possua o Maven e o Docker instalado em sua máquina. 
+> **Importante:** Certifique-se de que possua o Maven e o Docker instalado em sua máquina. 
 >  
 > O Maven será usado para a instalação das dependências e o docker para subir um banco de dados MySQL em seu ambiente de instalação, caso já possua uma instância MySQL previamente instalada e queira utilizar certifique-se que haja uma credencial com usuário root e senha root. 
 
@@ -33,7 +33,7 @@ Acesse a raiz da pasta do projeto e execute a aplicação com o comando a seguir
 
 > É normal este passo levar alguns minutos
 
-> **Note:** A aplicação irá subir na porta 8080 
+> **Importante:** A aplicação irá subir na porta 8080 e estas instruções referem-se a uma instalação local com o banco de dados também local.
 
 
 ### Autentique-se:
