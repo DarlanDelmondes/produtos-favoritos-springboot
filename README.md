@@ -31,6 +31,8 @@ Acesse a raiz da pasta do projeto e execute a aplicação com o comando a seguir
 
     mvn spring-boot:run -Drun.arguments="--spring.profiles.active=mysql"
 
+> É normal este passo levar alguns minutos
+
 ### Autentique-se:
 Para consumir qualquer recurso da API é necessária uma autenticação prévia via Basic Auth usando o método GET:
 
