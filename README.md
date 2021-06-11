@@ -1,3 +1,4 @@
+
 # Lista de Produtos SpringFavs
 
 Olá, seja bem vindo(a).
@@ -6,15 +7,35 @@ Trata-se de uma aplicação destinada a cadastrar uma coleção de produtos favo
 
 # Instalação
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
-## Docker (aplicação)
+> **Note:** Certifique-se de que possua o Maven e o Docker instalado em sua máquina. 
+>  
+> O Maven será usado para a instalação das dependências e o docker para subir um banco de dados MySQL em seu ambiente de instalação, caso já possua uma instância MySQL previamente instalada e queira utilizar certifique-se que haja uma credencial com usuário root e senha root. 
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+Baixe a imagem do MySQL em sua máquina:
 
-## Docker (MySQL)
+    docker run --name labs-desafio -p 3306:3306 -p 33060:33060  -e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='root' -d mysql/mysql-server:latest;
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+Acesse o MySQL atraves do comando:
+
+    docker exec -it labs-desafio mysql -uroot -proot
+
+Crie uma nova database chamada labs:
+
+    create database labs;
+    commit;
+
+## Subindo a aplicação
+Faça checkout do repositório em seu ambiente.
+Acesse a raiz da pasta do projeto e execute a aplicação com o comando a seguir:
+
+    mvn spring-boot:run -Drun.arguments="--spring.profiles.active=mysql"
+
+### Autentique-se:
+Para consumir qualquer recurso da API é necessária uma autenticação prévia via Basic Auth usando o método GET:
+
+ - Usuario: Luiza 
+ - Senha: Labs123
 
 # Como funciona
 
@@ -81,21 +102,21 @@ Atualizando um produto na prateleira:
 
 Exemplo:
 
-     http://<endpoint_da_aplicacao>/rest/pedido/novo/1
+     http://<endpoint_da_aplicacao>/rest/favorito/novo/1
 
 Onde:
 
-     http://<endpoint_da_aplicacao>/rest/pedido/novo/{clienteId}
+     http://<endpoint_da_aplicacao>/rest/favorito/novo/{clienteId}
 
 ## Adicionando o Produto na lista de favoritos de um Cliente
 
 > **Note:** Não é permitido adicionar o mesmo produto duas vezes na lista de favoritos:
 
-    http://<endpoint_da_aplicacao>/rest/pedido/novo/2/1/1,2,3
+    http://<endpoint_da_aplicacao>/rest/favorito/novo/2/1/1,2,3
 
 Onde:
 
-    http://<endpoint_da_aplicacao>/rest/pedido/novo/{clienteId}/{pedidoId}/{listaDeItens}
+    http://<endpoint_da_aplicacao>/rest/pedido/novo/{clienteId}/{favoritoId}/{listaDeItens}
 
 ## Listando os produtos da lista de favoritos de um determinado cliente
 
@@ -105,4 +126,6 @@ Consulta as listas do cliente:
 
 Consulta os produtos da lista:
 
-    http://localhost:8080/api/pedidoes/{pedidoId}/itens
+    http://localhost:8080/api/favoritoes/{favoritoId}/itens
+
+
