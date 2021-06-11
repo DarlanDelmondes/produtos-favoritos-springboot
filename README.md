@@ -123,7 +123,7 @@ Onde:
 
 Onde:
 
-    http://<endpoint_da_aplicacao>/rest/favorito/novo/{clienteId}/{favoritoId}/{listaDeItens}
+    http://<endpoint_da_aplicacao>/rest/favorito/novo/{clienteId}/{favoritoId}/{listaDeProducts}
 
 ## Listando os produtos da lista de favoritos de um determinado cliente
 
@@ -133,6 +133,6 @@ Consulta as listas do cliente:
 
 Consulta os produtos da lista:
 
-    http://localhost:8080/api/favoritoes/{favoritoId}/itens
+    http://localhost:8080/api/favoritoes/{favoritoId}/products
 
 
