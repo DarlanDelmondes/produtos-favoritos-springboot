@@ -36,6 +36,8 @@ Acesse a raiz da pasta do projeto e execute a aplicação com o comando a seguir
 ### Autentique-se:
 Para consumir qualquer recurso da API é necessária uma autenticação prévia via Basic Auth usando o método GET:
 
+    GET http://<endpoint_da_aplicacao>/api/clientes
+
  - Usuario: Luiza 
  - Senha: Labs123
 
