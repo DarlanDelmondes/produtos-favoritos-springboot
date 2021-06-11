@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.desafio.labs.springfavs.domain.Cliente;
 import com.desafio.labs.springfavs.domain.Favorito;
-import com.desafio.labs.springfavs.domain.Products;
+import com.desafio.labs.springfavs.domain.Product;
 import com.desafio.labs.springfavs.dto.RespostaDTO;
 import com.desafio.labs.springfavs.repository.ClienteRepository;
 import com.desafio.labs.springfavs.repository.FavoritoRepository;
@@ -62,31 +62,30 @@ public class AdicionaProdutosController {
 			
 			if (!flagProdutoRepetido) {
 				Optional<Favorito> pedidoOpt = pedidoRepository.findById(pedidoId);
-				Favorito pedido = pedidoOpt.get();
+				Favorito favorito = pedidoOpt.get();
 
-				List<Products> itensPedidos = new ArrayList<Products>();
+				List<Product> itensPedidos = new ArrayList<Product>();
 
 				for (String itemId : listaDeItensID) {
-					Optional<Products> itemOpt = itemRepository.findById(Long.parseLong(itemId));
-					Products item = itemOpt.get();
+					Optional<Product> itemOpt = itemRepository.findById(Long.parseLong(itemId));
+					Product item = itemOpt.get();
 					
 					itensPedidos.add(item);
 				}
-				pedido.setItens(itensPedidos);
-				pedido.setData(new Date());
-				pedido.setCliente(c);
-				c.getFavoritos().add(pedido);
+				favorito.setItens(itensPedidos);
+				favorito.setCliente(c);
+				c.getFavoritos().add(favorito);
 
 				this.clienteRepository.saveAndFlush(c);
 				
-				List<Long> pedidosID = new ArrayList<Long>();
+				List<Long> favID = new ArrayList<Long>();
 				for (Favorito p : c.getFavoritos()) {
-					pedidosID.add(p.getId());
+					favID.add(p.getId());
 				}
 
-				Long ultimoPedido = Collections.max(pedidosID);
+				Long ultimoFav = Collections.max(favID);
 
-				dto = new RespostaDTO(ultimoPedido,"Pedido efetuado com sucesso");
+				dto = new RespostaDTO(ultimoFav,"Produto(s) adicionado(s) com sucesso");
 			}else
 				throw new Exception("Produto repetido");
 

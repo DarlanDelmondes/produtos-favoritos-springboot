@@ -5,7 +5,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
-import com.desafio.labs.springfavs.domain.Products;
+import com.desafio.labs.springfavs.domain.Product;
 import com.desafio.labs.springfavs.repository.ClienteRepository;
 
 @Component
@@ -15,6 +15,6 @@ implements RepositoryRestConfigurer
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-        config.exposeIdsFor(Products.class,ClienteRepository.class);
+        config.exposeIdsFor(Product.class,ClienteRepository.class);
     }
 }

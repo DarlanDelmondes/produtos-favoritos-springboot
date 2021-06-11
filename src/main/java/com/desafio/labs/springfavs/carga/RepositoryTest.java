@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.desafio.labs.springfavs.domain.Cliente;
 import com.desafio.labs.springfavs.domain.Favorito;
-import com.desafio.labs.springfavs.domain.Products;
+import com.desafio.labs.springfavs.domain.Product;
 import com.desafio.labs.springfavs.repository.ClienteRepository;
 
 @Component
@@ -35,17 +35,17 @@ implements ApplicationRunner
     	Cliente cliente = new Cliente(ID_CLIENTE,"Darlan","darlan-teste@live.com");
     	
     	//Long id,String title,Double price, String brand, String image, String reviewScore
-    	Products prod1 = new Products(ID_ITEM1,"G6 Moto",1200.00,"Motorola",
+    	Product prod1 = new Product(ID_ITEM1,"G6 Moto",1200.00,"Motorola",
     					"https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
     					1.0);
-    	Products prod2 = new Products(ID_ITEM2,"QLED 8K",7000.00,"Samsung",
+    	Product prod2 = new Product(ID_ITEM2,"QLED 8K",7000.00,"Samsung",
 						"https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
 						1.0);
-    	Products prod3 = new Products(ID_ITEM3,"iPhone 11",5000.00,"Apple",
+    	Product prod3 = new Product(ID_ITEM3,"iPhone 11",5000.00,"Apple",
 						"https://brmotorolanew.vteximg.com.br/arquivos/ids/156175-700-700/Moto-G9_ELECTRIC-BLUE_PDP-HERO-foto-1.png?v=637455482514630000",
 						1.0);
 		    	
-    	List<Products> listaProdutosFernando1 = new ArrayList<Products>();
+    	List<Product> listaProdutosFernando1 = new ArrayList<Product>();
     	listaProdutosFernando1.add(prod1);
     	listaProdutosFernando1.add(prod2);
     	listaProdutosFernando1.add(prod3);

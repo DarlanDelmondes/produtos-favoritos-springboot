@@ -27,19 +27,15 @@ public class Favorito {
 
 	@ManyToMany
 	@Cascade(CascadeType.MERGE)
-	private List<Products> products;
-
-	@DateTimeFormat(pattern = "dd-MM-yyyy")
-	private Date data;
+	private List<Product> products;
 
 	public Favorito() {}
 
-	public Favorito(Long id,Cliente cliente,List<Products> products) {
+	public Favorito(Long id,Cliente cliente,List<Product> products) {
 		super();
 		this.id = id;
 		this.cliente = cliente;
 		this.products = products;
-		this.data = new Date();
 	}
 
 	public Long getId() {
@@ -58,20 +54,12 @@ public class Favorito {
 		this.cliente = cliente;
 	}
 
-	public List<Products> getProducts() {
+	public List<Product> getProducts() {
 		return products;
 	}
 
-	public void setItens(List<Products> products) {
+	public void setItens(List<Product> products) {
 		this.products = products;
-	}
-
-	public Date getData() {
-		return data;
-	}
-
-	public void setData(Date data) {
-		this.data = data;
 	}
 
 	@Override
@@ -101,7 +89,7 @@ public class Favorito {
 
 	@Override
 	public String toString() {
-		return "Pedido [id=" + id + ", cliente=" + cliente + ", products=" + products + ", data=" + data + "]";
+		return "Pedido [id=" + id + ", cliente=" + cliente + ", products=" + products + "]";
 	}
 
 }

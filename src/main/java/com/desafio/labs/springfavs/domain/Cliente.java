@@ -41,6 +41,7 @@ public class Cliente {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.novoFavorito(new Favorito());
 	}
 
 	public Cliente() {}
@@ -81,7 +82,6 @@ public class Cliente {
 		favoritos.add(favorito);
 		
 	}
-
 	
 	public void setPedidos(List<Favorito> favoritos) {
 		this.favoritos = favoritos;

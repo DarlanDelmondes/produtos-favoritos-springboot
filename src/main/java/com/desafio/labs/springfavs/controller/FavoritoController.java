@@ -19,7 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.desafio.labs.springfavs.domain.Cliente;
 import com.desafio.labs.springfavs.domain.Favorito;
-import com.desafio.labs.springfavs.domain.Products;
+import com.desafio.labs.springfavs.domain.Product;
 import com.desafio.labs.springfavs.repository.ClienteRepository;
 import com.desafio.labs.springfavs.repository.FavoritoRepository;
 import com.desafio.labs.springfavs.repository.ProductRepository;
@@ -73,8 +73,7 @@ public class FavoritoController {
 			Cliente c = clienteOpt.get();
 			
 			pedidoParaAlterar.setItens(pedido.getProducts());
-			
-			pedidoParaAlterar.setData(pedido.getData());			
+					
 			c.getFavoritos().remove(pedidoParaAlterar);
 			c.getFavoritos().add(pedidoParaAlterar);
 			this.clienteRepository.save(c);

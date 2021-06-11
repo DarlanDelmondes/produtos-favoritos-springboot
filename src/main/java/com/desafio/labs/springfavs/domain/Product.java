@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-public class Products  {
+public class Product  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,9 +34,9 @@ public class Products  {
     @NotNull
 	private Double reviewScore;
         
-	public Products() {}
+	public Product() {}
 
-	public Products(Long id,String title,Double price, String brand, String image, Double reviewScore) {
+	public Product(Long id,String title,Double price, String brand, String image, Double reviewScore) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -110,7 +110,7 @@ public class Products  {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Products other = (Products) obj;
+		Product other = (Product) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
