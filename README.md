@@ -54,7 +54,7 @@ Listando os clientes cadastrados:
 Adicionando um cliente:
 
     POST http://<endpoint_da_aplicacao>/api/clientes
-    {"endereco": "nome@conta.com", "nome": "Usuario"}
+    {"email": "nome@conta.com", "nome": "Usuario"}
 
 Consultando um cliente:
 
@@ -67,7 +67,7 @@ Excluindo um cliente:
 Atualizando um cliente:
 
     PUT http://<endpoint_da_aplicacao>/api/clientes
-    {"endereco": "nome@conta.com", "nome": "Usuario"}
+    {"email": "nome@conta.com", "nome": "Usuario"}
 
 ## Cadastrando um Produto
 
