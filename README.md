@@ -14,11 +14,11 @@ Trata-se de uma aplicação destinada a cadastrar uma coleção de produtos favo
 
 Baixe a imagem do MySQL em sua máquina:
 
-    docker run --name labs-desafio -p 3306:3306 -p 33060:33060  -e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='root' -d mysql/mysql-server:latest;
+    sudo docker run --name labs-desafio -p 3306:3306 -p 33060:33060  -e MYSQL_ROOT_HOST='%' -e MYSQL_ROOT_PASSWORD='root' -d mysql/mysql-server:latest;
 
 Acesse o MySQL atraves do comando:
 
-    docker exec -it labs-desafio mysql -uroot -proot
+    sudo docker exec -it labs-desafio mysql -uroot -proot
 
 Crie uma nova database chamada labs:
 
